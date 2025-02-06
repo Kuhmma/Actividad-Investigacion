@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <vector>
 #include <sstream>
 #include <stdexcept>
 
@@ -92,20 +91,20 @@ double calcularcalorias(const string& rutaArchivo){
                     int calorias = stringToInt(caloriasStr);
                     suma += calorias;
                     contador++;
-                    cout << "Calorías quemadas en este día: " << calorias << endl;
+                    cout << "CalorÃ­as quemadas en este dÃ­a: " << calorias << endl;
                 }
                 catch (const invalid_argument& e) {
-                    cout << "No se pudo convertir calorías en la línea: " << linea << endl;
+                    cout << "No se pudo convertir calorÃ­as en la lÃ­nea: " << linea << endl;
                 }
             }
         }
     }
     archivo.close();
     if(contador==0){
-        cout << "No se encontraron registros de calorías." << endl;
+        cout << "No se encontraron registros de calorÃ­as." << endl;
         return 0.0;
     }
-    cout << "Suma total de calorías: " << suma << ", Total de registros: " << contador << endl;
+    cout << "Suma total de calorÃ­as: " << suma << ", Total de registros: " << contador << endl;
 
     return static_cast<double>(suma) / contador;
 }
